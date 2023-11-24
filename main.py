@@ -2,6 +2,7 @@ from datetime import datetime
 from enum import Enum
 from typing import List, Optional, Union
 
+import uvicorn
 from fastapi_users import fastapi_users, FastAPIUsers
 from pydantic import BaseModel, Field
 
@@ -90,3 +91,7 @@ def nlp_train_model(model_name: str) -> bytes:
 @app.get("/api/v1/check-alive")
 def check_alive():
     return {"msg": "I'm alive"}
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", reload=True, port=8888)

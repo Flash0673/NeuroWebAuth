@@ -1,10 +1,13 @@
-alembic
-fastapi[all]
+alembic~=1.12.1
+fastapi[all]~=0.104.1
 fastapi-users[sqlalchemy]
 psycopg2
-python-dotenv
-sqlalchemy
+python-dotenv~=1.0.0
+sqlalchemy~=2.0.23
 asyncpg
 pytest
 httpx
 psycopg
+passlib~=1.7.4
+uvicorn~=0.24.0.post1
+pydantic~=2.5.1

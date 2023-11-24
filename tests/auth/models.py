@@ -1,5 +1,5 @@
 from datetime import datetime
-from db_manager import Base
+from tests.auth.db_manager import Base
 from sqlalchemy import Integer, String, TIMESTAMP, Boolean, Column
 
 
