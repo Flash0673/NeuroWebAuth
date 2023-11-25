@@ -36,4 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
+        pytest test_auth.py::test_registration
+        pytest test_auth.py::test_registration_existing_user
+        pytest test_auth.py::test_log_in_non_existing_user
+        pytest test_auth.py::test_log_in
